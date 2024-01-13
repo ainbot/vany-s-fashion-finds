@@ -1,0 +1,387 @@
+    body {
+        font-family: 'Roboto', Arial, sans-serif;
+        margin: 0;
+        box-sizing: border-box;
+        background-image: url('/public/images/f2.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+
+    header {
+        background-color: #541d6a;
+        color: white;
+        text-align: center;
+        padding: 0.5em;
+        background-image: url('/public/images/c1.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 8px;
+        animation: slideHeader 4s linear infinite;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px; /* Adicione margem inferior para acomodar a barra de ferramentas */
+    }
+
+    .header-title {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .header-description {
+        font-family: 'Cursive', 'Brush Script MT', cursive;
+        font-size: 24px;
+        margin-top: 0px;
+    }
+
+    .menu-icon {
+        cursor: pointer;
+        font-size: 28px;
+        margin-right: 10px;
+    }
+
+    .toolbar-container {
+        display: flex;
+        justify-content: flex-end;
+        align-self: flex-end;
+        margin-top: auto;
+    }
+
+    .toolbar {
+        display: none;
+        position: absolute;
+        top: 100px;
+        right: 55px;
+        background-color: #f1c9c9; /* Altere para a cor vermelha desejada */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 20px; /* Aumente o espaçamento interno conforme desejado */
+        z-index: 1000;
+    }
+
+    .toolbar h3 {
+        color: #171515; /* Altere para a cor de texto desejada */
+        font-size: 25px; /* Altere o tamanho do texto conforme necessário */
+        margin: 0;
+    }
+
+    .toolbar-item {
+        margin-bottom: 10px;
+        cursor: pointer;
+        font-size: 18px;
+        color: rgb(99, 80, 80);
+    }
+
+    /* Adicione a propriedade hover para dar um destaque ao passar o mouse */
+    .toolbar-item:hover {
+        color: #f0f0f0; /* Altere para a cor vermelha desejada */
+    }
+
+
+    .categories-container {
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        padding: 10px;
+        max-width: 100%;
+        background-color: #f4eeee;
+        z-index: 1000;
+    }
+
+    .category-button {
+        background-color: #f1c9c9;
+        color: rgb(99, 80, 80);
+        margin: 0 10px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border: none;
+        padding: 10px;
+        font-size: 16px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        font-weight: bold;
+        font-family: 'Bebas Neue', sans-serif; /* Substitua 'Bebas Neue' pela fonte desejada */
+    }
+
+    .category-button:hover {
+        background-color: #f0f0f0;
+    }
+
+
+
+
+    main {
+        padding: 1em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .product {
+        border: 1px solid #ccc;
+        padding: 1em;
+        margin-bottom: 1em;
+        cursor: pointer;
+        box-sizing: border-box;
+        width: calc(25% - 1em);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: rgba(255, 255, 255, 0.5); /* Cor branca transparente para o estado normal */
+    }
+
+    .product img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .product:hover {
+        background-color: #f0f0f0;
+    }
+
+
+
+
+    @media screen and (max-width: 768px) {
+        .product {
+            width: calc(50% - 1em);
+        }
+    }
+
+    .images-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('/public/images/f2.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 0px; /* Ajuste conforme necessário para o espaçamento desejado */
+        background-color: #f0f0f0; /* Adicione uma cor de fundo para destacar as imagens */
+    }
+
+    .images-container img {
+        margin: 0;
+        padding: 10px;
+        border-radius: 14px;
+        /* Remova a margem padrão das imagens */
+    }
+
+    footer {
+        /* Torna o rodapé fixo na parte inferior da tela */
+        bottom: 0; /* Alinha o rodapé à parte inferior da tela */
+        color: white;
+        text-align: center;
+        background-image: url('/public/images/t3.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        padding: 20px 0; /* Adicione espaçamento interno ao rodapé */
+        border-top: 1px solid white; /* Adicione uma linha superior ao rodapé */
+    }
+
+
+    .terms {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 40px;
+        margin-right: 50px;
+        
+    }
+
+    .terms p {
+        margin: 0px;
+        padding: 0 10px;
+        color: blue; /* Adicione esta linha para tornar o texto azul */
+        visibility: visible; /* Adicione esta linha para garantir que o texto seja visível */
+    }
+
+    .pagination-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    .pagination-container button {
+        background-color: #f6e6e6;
+        color: rgb(0, 0, 0);
+        margin: 0 5px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .pagination-container button:hover {
+        background-color: #fcbdbd;
+    }
+    .no-stock-message {
+    margin: auto;
+        text-align: center; /* Centraliza o texto */
+        margin-top: 20px; /* Adiciona margem superior para o "OPS!!" ficar acima */
+    }
+
+    /* Adiciona estilo ao "OPS!!" */
+    .no-stock-message::before {
+        content: "OPS!! "; /* Adiciona "OPS!!" antes do texto principal */
+        font-weight: bold; /* Deixa o "OPS!!" em negrito */
+        display: block; /* Coloca "OPS!!" em uma linha separada */
+        font-size: 24px; /* Ajusta o tamanho da fonte do "OPS!!" conforme necessário */
+        color: rgb(136, 81, 238); /* Adiciona a cor vermelha ao texto "OPS!!" */
+    }
+    
+    /* Adicione o estilo para o modal (pop-up) */
+    .modal {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        background-image: url('images/f2.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%; /* Ajuste a largura conforme necessário */
+        max-width: 600px; /* Largura máxima */
+        z-index: 9999; /* Certifique-se de que o modal esteja acima de tudo */
+    }
+
+    .modal-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        position: relative;
+        overflow: hidden; /* Adiciona overflow:hidden para ocultar imagens além da largura do modal */
+    }
+
+    /* Estilo para o botão "Comprar" */
+    .modal-content button {
+        background-color: #4CAF50; /* Cor de fundo verde */
+        color: #fff; /* Cor do texto branca */
+        padding: 10px 10px;
+        margin-left: 50%;
+        position: relative; /* Espaçamento interno */
+        margin-top: 15px; /* Adicione margem ao topo */
+        font-size: 18px;
+        border: none; /* Sem borda */
+        border-radius: 5px; /* Bordas arredondadas */
+        cursor: pointer;
+        transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+    }
+
+    .modal-content button:hover {
+        background-color: #45a049; /* Cor de fundo verde escuro ao passar o mouse */
+    }
+
+    .close {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        font-size: 24px;
+        cursor: pointer;
+        color: #ca3333;
+    }
+
+    .close:hover {
+        color: #000;
+    }
+
+    /* Estilo para esconder o overflow quando o modal está aberto */
+    .modal-open {
+        overflow: hidden;
+    }
+
+    /* Estilo para a imagem dentro da modal */
+    .modal-content img {
+        max-width: 100%;
+        max-height: 300px; /* Altura máxima de 300 pixels */
+        width: auto;
+        height: auto;
+        border-radius: 10px; /* Adicione o border-radius desejado */
+        display: block;
+        margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    }
+
+    /* Adicione setas de navegação para desktop e tablet */
+    @media (min-width: 768px) {
+        .modal-content {
+            position: relative; /* Reconfigura a posição relativa para setas de navegação */
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            color: rgb(21, 7, 7);
+            font-weight: bold;
+            font-size: 24px;
+            transition: 0.6s ease;
+            border-radius: 5px;
+            user-select: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            transform: translateY(-50%); /* Centraliza verticalmente */
+            z-index: 2; /* Garante que as setas apareçam sobre a imagem */
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    }
+    #loadingIndicator {
+        position: fixed;
+        bottom: 10%; /* Ajuste a posição vertical conforme necessário */
+        left: 50%;
+        transform: translateX(-50%); /* Centraliza horizontalmente */
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+    }
+    
+    
+    #loadingText {
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: #333; /* Cor do texto */
+    }
+    
+    #loadingProgressBar {
+        height: 20px;
+        background-color: #4CAF50; /* Cor verde para a barra de progresso */
+        width: 0; /* Inicialmente, a largura é 0% */
+        border-radius: 5px;
+    }
+    

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vany's Fashion Finds</title>
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="header-title">Vany's Fashion Finds</h1>
+        <p class="header-description">Sua loja de moda exclusiva</p>
+        <div class="toolbar-container">
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <div class="toolbar" id="toolbar">
+                <!-- Adicione seus itens de barra de ferramentas aqui -->
+                <div class="toolbar-item" onclick="loadContent('pagamentos.html')">Pagamentos</div>
+                <div class="toolbar-item" onclick="loadContent('about.html')">Sobre</div>
+                <div class="toolbar-item" onclick="loadContent('terms.html')">Termos</div>
+            </div>
+        </div>
+        
+        <script>
+            function loadContent(page) {
+                showLoadingIndicator(); // Mostra o indicador de carregamento
+        
+                // Simula um atraso de 2 segundos antes de chamar a função navigateTo
+                setTimeout(function() {
+                    navigateTo(page);
+        
+                    // Oculta o indicador de carregamento após o término da simulação
+                    setTimeout(hideLoadingIndicator, 2000);
+                }, 2000);
+            }
+        
+            function navigateTo(page) {
+                // Simula carregamento de conteúdo (substitua isso pelo seu código real)
+                setTimeout(function() {
+                    // Seu código de carregamento de conteúdo aqui
+        
+                    // Exemplo de código (substitua isso pelo seu código real)
+                    const main = document.getElementById('main');
+                    main.innerHTML = `<p>Conteúdo da página ${page} carregado!</p>`;
+                }, 2000);
+            }
+        
+            // Funções de indicador de carregamento (mantive as mesmas funções do exemplo anterior)
+            function showLoadingIndicator() {
+                document.getElementById('loadingIndicator').style.display = 'block';
+            }
+        
+            function hideLoadingIndicator() {
+                document.getElementById('loadingIndicator').style.display = 'none';
+            }
+        </script>
+        
+    </header>
+
+    <div class="categories-container">
+        <button class="category-button" onclick="simulateLoading('Camisas')">Camisas</button>
+        <button class="category-button" onclick="simulateLoading('Calcas')">Calças</button>
+        <button class="category-button" onclick="simulateLoading('Sapatos')">Sapatos</button>
+        <button class="category-button" onclick="simulateLoading('Bolsas')">Bolsas</button>
+    </div>
+    
+    <script>
+        function simulateLoading(category) {
+            showLoadingIndicator(); // Mostra o indicador de carregamento
+    
+            // Simula um atraso de 2 segundos antes de chamar a função filterProducts
+            setTimeout(function() {
+                filterProducts(category);
+    
+                // Oculta o indicador de carregamento após o término da simulação
+                setTimeout(hideLoadingIndicator, 2000);
+            }, 2000);
+        }
+    
+        function filterProducts(category) {
+            // Simule carregamento de dados (substitua isso pelo seu código real)
+            setTimeout(function() {
+                // Seu código de carregamento de produtos aqui
+    
+                // Exemplo de código (substitua isso pelo seu código real)
+                const main = document.getElementById('main');
+                main.innerHTML = `<p>Produtos da categoria ${category} carregados!</p>`;
+            }, 2000);
+        }
+    
+        function showLoadingIndicator() {
+            document.getElementById('loadingIndicator').style.display = 'block';
+        }
+    
+        function hideLoadingIndicator() {
+            document.getElementById('loadingIndicator').style.display = 'none';
+        }
+    </script>
+    
+    <div id="addProductForm" style="display: none;">
+        <h2>Adicionar Produto</h2>
+        <label for="productName">Nome do Produto:</label>
+        <input type="text" id="productName" required>
+    
+        <label for="productDescription">Descrição do Produto:</label>
+        <textarea id="productDescription" required></textarea>
+    
+        <label for="productPrice">Preço:</label>
+        <input type="number" id="productPrice" required>
+    
+        <label for="productImage">URL da Imagem:</label>
+        <input type="text" id="productImage" required>
+    
+        <button onclick="addProduct()">Adicionar Produto</button>
+    </div>
+
+    <main id="main">
+        <!-- Seu conteúdo principal aqui -->
+    </main>
+    <div id="loadingIndicator" class="loading-indicator" style="display: none;">
+        <!-- Conteúdo do indicador de carregamento (personalize conforme necessário) -->
+        <strong>Carregando...</strong>
+    </div>
+
+    <div class="pagination-container">
+        <button onclick="previousPage()">Anterior</button>
+        <button onclick="nextPage()">Próxima Página >></button>
+    </div>
+    
+
+    <div class="images-container">
+        <img src="images/mpesa.jpg" alt="Image 1" width="45" height="45">
+        <img src="images/emola.jpg" alt="Image 2" width="45" height="45">
+    </div>
+
+    <!-- Modal para exibir detalhes do produto -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="prev" onclick="prevImage()">&#10094;</div>
+            <img id="modalImage" alt="Product Image">
+            <div class="next" onclick="nextImage()">&#10095;</div>
+            <h2 id="modalProductName"></h2>
+            <p id="modalProductDescription"></p>
+            <span class="price" id="modalProductPrice"></span>
+            <button onclick="buyProduct()">Encomendar</button>
+        </div>
+        <!-- Adicione as setas de navegação prev e next fora da modal-content -->
+        <div class="prev" onclick="prevImage()">&#10094;</div>
+        <div class="next" onclick="nextImage()">&#10095;</div>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2024 Vany's Fashion Finds</p>
+        <!-- Adicione um link para a página terms.html aqui -->
+        <<div class="terms">
+            <a href="terms.html" onclick="loadPage('terms.html'); return false;">Termos e Condições</a>
+            <a href="about.html" onclick="loadPage('about.html'); return false;">Sobre nós</a>
+            <!-- Adicione mais termos conforme necessário -->
+        </div>
+        
+        <script>
+            // Função para carregar uma nova página com indicador de carregamento
+            function loadPage(page) {
+                showLoadingIndicator(); // Mostra o indicador de carregamento
+        
+                // Simula um atraso de 2 segundos antes de redirecionar para a nova página
+                setTimeout(function () {
+                    window.location.href = page;
+        
+                    // Oculta o indicador de carregamento após o término da simulação
+                    setTimeout(hideLoadingIndicator, 2000);
+                }, 2000);
+            }
+        
+            // Funções de indicador de carregamento (mantive as mesmas funções do exemplo anterior)
+            function showLoadingIndicator() {
+                document.getElementById('loadingIndicator').style.display = 'block';
+            }
+        
+            function hideLoadingIndicator() {
+                document.getElementById('loadingIndicator').style.display = 'none';
+            }
+        </script>
+        
+    </footer>
+
+    <!-- Adicione o SDK do Firebase e as configurações -->
+    <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-database-compat.js"></script>
+
+    <script src="/src/firebase-config.js"></script>
+<script src="/src/script.js"></script>
+</body>
+
+
+</html>

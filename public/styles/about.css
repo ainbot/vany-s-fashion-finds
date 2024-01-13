@@ -1,0 +1,84 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    background-image: url('/public/images/f2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    margin: 10px; /* Adicione esta linha para centralizar o container */
+}
+
+header {
+    background-color: #541d6a;
+    color: white;
+    text-align: center;
+    padding: 1.3em;
+    background-image: url('/public/images/c1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    animation: slideHeader 4s linear infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Adicione margem inferior para acomodar a barra de ferramentas */
+}
+
+.header-title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.header-description {
+    font-family: 'Cursive', 'Brush Script MT', cursive;
+    font-size: 24px;
+    margin-top: 0px;
+    margin: auto;
+}
+
+
+
+footer {
+    /* Torna o rodapé fixo na parte inferior da tela */
+    bottom: 0; /* Alinha o rodapé à parte inferior da tela */
+    
+    color: white;
+    text-align: center;
+    background-image: url('/public/images/t3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 20px 0; /* Adicione espaçamento interno ao rodapé */
+    border-top: 1px solid white; /* Adicione uma linha superior ao rodapé */
+}
+
+.card-view {
+    background-color: #541d6a; /* Cor do cabeçalho para contrastar com o texto branco */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+}
+
+.card-view h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card-view p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}

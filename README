@@ -1,0 +1,24 @@
+Abra o arquivo index.html em um navegador da web.
+Estrutura do Projeto
+images/: Contém imagens utilizadas no projeto.
+styles/: Contém os arquivos CSS para estilizar as páginas.
+src/: Contém os scripts JavaScript, incluindo o arquivo script.js e firebase-config.js.
+Outros arquivos e pastas correspondentes ao conteúdo do seu projeto.
+Como Usar
+Navegue entre as páginas usando a barra de ferramentas.
+Filtragem de produtos por categorias através dos botões na parte superior.
+Adicione novos produtos clicando no botão de Adicionar Produto e preenchendo o formulário.
+Explore os detalhes do produto clicando nas imagens ou usando a modal de detalhes.
+Dependências
+Firebase: SDK do Firebase para integração com o banco de dados em tempo real.
+Contribuição
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues, sugerir melhorias ou enviar pull requests.
+
+Licença
+Este projeto está sob a licença MIT.
+
+Contato
+Para mais informações, entre em contato com Vany's Fashion Finds em support@vanyfashionfinds.com.
+
+Status do Projeto
+Em desenvolvimento ativo.
